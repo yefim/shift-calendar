@@ -1,0 +1,303 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: #f6f8fa;
+  color: #222;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Add simple form styles for accessibility and spacing */
+input[type="text"],
+input[type="email"] {
+  font-size: 1rem;
+  padding: 0.75em;
+  border: 1.5px solid #888;
+  border-radius: 6px;
+  margin-bottom: 0.75em;
+  background: #f9f9fc;
+  color: #222;
+  width: 100%;
+  box-sizing: border-box;
+}
+input[type="text"]:focus,
+input[type="email"]:focus {
+  outline: 2px solid #646cff;
+  background: #fff;
+}
+
+button[type="submit"] {
+  background: #646cff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75em 1em;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1em;
+  transition: background 0.2s;
+}
+button[type="submit"]:hover {
+  background: #535bf2;
+}
+
+button[type="button"] {
+  background: #646cff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4em 1em;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button[type="button"]:disabled {
+  background: #ccc;
+  color: #888;
+  cursor: not-allowed;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.35em;
+  font-weight: 600;
+  color: #222;
+}
+
+label[for^="hour-"] {
+  display: block;
+  margin-bottom: 0.25em;
+  font-weight: 600;
+  color: #222;
+}
+
+legend {
+  color: #222;
+  font-weight: 600;
+}
+
+ul {
+  color: #222;
+  font-size: 1.05rem;
+}
+
+select[multiple] {
+  font-size: 1rem;
+  padding: 0.5em;
+  border: 1.5px solid #888;
+  border-radius: 6px;
+  background: #f9f9fc;
+  color: #222;
+  width: 100%;
+  min-height: 2.5em;
+  margin-bottom: 0.5em;
+  box-sizing: border-box;
+}
+select[multiple]:focus {
+  outline: 2px solid #646cff;
+  background: #fff;
+}
+
+fieldset legend {
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  color: #333;
+}
+
+fieldset div {
+  margin-bottom: 0.35em;
+}
+
+main[style] {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px #0002;
+  padding: 24px 12px;
+  margin: 16px 0;
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+@media (min-width: 600px) {
+  main[style] {
+    max-width: 480px;
+    margin: 32px auto;
+    padding: 32px 24px;
+  }
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  text-align: center;
+  font-weight: 700;
+}
+
+form {
+  width: 100%;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+legend {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+label {
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: block;
+}
+
+ul {
+  color: #222;
+  font-size: 1.05rem;
+  margin: 8px 0 0 0;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+input[type="text"] {
+  color: #222;
+  background: #f9f9fc;
+  border: 1.5px solid #888;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 0;
+}
+input[type="text"]:focus {
+  outline: 2px solid #646cff;
+  background: #fff;
+}
+
+button[type="button"] {
+  background: #646cff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  min-width: 40px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button[type="button"]:disabled {
+  background: #ccc;
+  color: #888;
+  cursor: not-allowed;
+}
+button[aria-label^="Remove"] {
+  background: #ff4d4f;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  font-size: 1.25rem;
+  margin-left: 4px;
+}
+
+button[type="submit"] {
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+button[type="submit"]:hover {
+  background: #646cff;
+}
+
+@media (min-width: 600px) {
+  main[style] {
+    max-width: 480px;
+    margin: 32px auto;
+    padding: 32px 24px;
+  }
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 24px;
+  }
+  button[type="submit"] {
+    font-size: 1.2rem;
+    padding: 16px 0;
+  }
+}
+
+[role="status"] {
+  color: #2e7d32;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 24px;
+  font-size: 1.1rem;
+}
