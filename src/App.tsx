@@ -8,10 +8,10 @@ import {
 } from 'firebase/firestore';
 
 function App() {
-  // May 21st, 2025, hourly slots (9am to 9pm)
+  // May 25th, 2025, hourly slots (9am to 9pm)
   const hours = Array.from({ length: 13 }, (_, i) => 9 + i); // 9am to 9pm
 
-  const SHIFTS_DOC_ID = 'may21-2025';
+  const SHIFTS_DOC_ID = 'may25-2025';
   const SHIFTS_DOC_REF = doc(db, 'shiftCalendars', SHIFTS_DOC_ID);
 
   // State: for each hour, track selected volunteers
@@ -80,9 +80,9 @@ function App() {
       <h1>Volunteer Shift Calendar</h1>
       <form aria-label="Shift calendar form" autoComplete="off">
         <fieldset style={{ border: 'none', padding: 0, marginBottom: 12 }}>
-          <legend>Assign volunteers to each hour on May 21st</legend>
+          <legend>Assign volunteers to each hour on May 25th</legend>
           {hours.map((hour) => {
-            const hourLabel = new Date(2025, 4, 21, hour).toLocaleTimeString([], {
+            const hourLabel = new Date(2025, 4, 25, hour).toLocaleTimeString([], {
               hour: '2-digit', minute: '2-digit', hour12: true
             });
             return (
