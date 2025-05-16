@@ -1,0 +1,13 @@
+<svg width="400" height="210" viewBox="0 0 400 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="210" rx="24" fill="#f6f8fa"/>
+  <rect x="40" y="40" width="320" height="130" rx="12" fill="#fff" stroke="#646cff" stroke-width="2"/>
+  <text x="200" y="70" text-anchor="middle" font-size="22" font-family="Inter, Arial, sans-serif" fill="#222" font-weight="bold">Volunteer Shift Calendar</text>
+  <rect x="60" y="90" width="280" height="32" rx="6" fill="#f9f9fc" stroke="#888" stroke-width="1"/>
+  <circle cx="80" cy="106" r="8" fill="#646cff"/>
+  <rect x="95" y="98" width="60" height="16" rx="4" fill="#e0e7ff"/>
+  <circle cx="170" cy="106" r="8" fill="#646cff"/>
+  <rect x="185" y="98" width="60" height="16" rx="4" fill="#e0e7ff"/>
+  <circle cx="260" cy="106" r="8" fill="#646cff"/>
+  <rect x="275" y="98" width="40" height="16" rx="4" fill="#e0e7ff"/>
+  <text x="200" y="190" text-anchor="middle" font-size="14" font-family="Inter, Arial, sans-serif" fill="#888">May 21st, 9am–9pm</text>
+</svg>
