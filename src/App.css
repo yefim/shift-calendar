@@ -221,7 +221,8 @@ input[type="text"] {
   border-radius: 8px;
   padding: 8px;
   font-size: 1rem;
-  width: 100%;
+  width: 220px;
+  max-width: 100%;
   box-sizing: border-box;
   margin-bottom: 0;
 }

@@ -77,18 +77,28 @@ function App() {
 
   return (
     <main style={{ maxWidth: 500, margin: '0 auto', textAlign: 'left' }}>
-      <h1>Volunteer Shift Calendar</h1>
+      <h1>Bedford Slip Volunteer Signup</h1>
+      <div style={{ marginBottom: 24 }}>
+        <h2 style={{ fontSize: '1.1rem', fontWeight: 600, margin: 0 }}>Please claim any shifts you can!</h2>
+        <div style={{ fontSize: '1rem', color: '#444', marginTop: 4 }}>
+          <div><strong>Date:</strong> Sunday, May 25</div>
+          <div><strong>Location:</strong> Bedford Ave between Nassau &amp; Manhattan Ave</div>
+        </div>
+      </div>
       <form aria-label="Shift calendar form" autoComplete="off">
         <fieldset style={{ border: 'none', padding: 0, marginBottom: 12 }}>
-          <legend>Assign volunteers to each hour on May 25th</legend>
           {hours.map((hour) => {
             const hourLabel = new Date(2025, 4, 25, hour).toLocaleTimeString([], {
               hour: '2-digit', minute: '2-digit', hour12: true
             });
+            const isSetupShift = hour === 9;
+            const isBreakdownShift = hour === 21;
             return (
               <div key={hour} style={{ marginBottom: 24 }}>
                 <label htmlFor={`hour-${hour}`} style={{ fontWeight: 600 }}>
                   {hourLabel}
+                  {isSetupShift && <span style={{ color: '#646cff', fontWeight: 500, fontSize: '0.95em', marginLeft: 8 }}>(setup shift)</span>}
+                  {isBreakdownShift && <span style={{ color: '#ff4d4f', fontWeight: 500, fontSize: '0.95em', marginLeft: 8 }}>(breakdown shift)</span>}
                 </label>
                 <ul style={{ margin: '8px 0', paddingLeft: 20 }}>
                   {hourSelections[hour].map((name, idx) => (
@@ -133,7 +143,7 @@ function App() {
                 <div style={{ display: 'flex', gap: 8, marginTop: 8 }}>
                   <input
                     type="text"
-                    placeholder="Add name to this shift"
+                    placeholder="Add yourself to this shift"
                     value={localNames[hour] || ''}
                     onChange={e => setLocalNames(prev => ({ ...prev, [hour]: e.target.value }))}
                     style={{ flex: 1, minWidth: 0 }}
